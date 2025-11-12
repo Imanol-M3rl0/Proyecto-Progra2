@@ -1,0 +1,231 @@
+﻿<Window x:Class="WpfCalculadoraP2C.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfCalculadoraP2C"
+        mc:Ignorable="d"
+       Title="Calculadora" 
+        Height="481"
+        Width="400"
+        Icon="/images/calculator.png"
+         Background="Beige">
+    <Window.Resources>
+        <SolidColorBrush x:Key="colorDeBotonesConNumeros"
+                         Color="Aqua"/> 
+    </Window.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/michi.jpg" Opacity="0.9"/>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+
+        <Label x:Name="lblEstandar"
+           Grid.Row="1"
+           Grid.Column="0"
+           Content="Estándar"
+           Margin="0,0,0,10"
+           FontWeight="Bold" />
+
+        <Label x:Name="lblResult"
+           Grid.Row="1"
+           Grid.Column="3"
+           Content="0"
+           FontSize="60"
+           FontWeight="Bold"
+           VerticalContentAlignment="Top"
+           HorizontalAlignment="Right"
+           Margin="0,30,0,45"
+           Grid.RowSpan="3"
+            Foreground="DarkCyan"/>
+
+
+        <Button x:Name="btnCe" Grid.Row="3" 
+                Grid.Column="0" 
+                Content="CE" 
+                FontSize="30" 
+                Margin="5" 
+                Background="Transparent"
+                 Click="btnCe_Click"/>
+        <Button x:Name="btnC" 
+                Grid.Row="3" 
+                Grid.Column="1" 
+                Content="C" 
+                Margin="5"
+                Background="Transparent" 
+              Click="btnC_Click"/>
+        <Button x:Name="btnFlechita"
+                Grid.Row="3"
+                Grid.Column="2"
+                Content="←" 
+                Margin="5"
+                Background="Transparent" 
+                Click="btnFlechita_Click" 
+                />
+        <Button x:Name="btnModulo" 
+                Grid.Row="3" 
+                Grid.Column="3" 
+                Content="%"
+                Margin="5"
+                Background="Transparent"
+               Click="btnModulo_Click"/>
+
+        <Button x:Name="btnUnoSobreX"
+                Grid.Row="4" 
+                Grid.Column="0" 
+                Content="⅟×"  
+                Margin="5" 
+                Background="Transparent"
+                Click="btnUnoSobreX_Click"/>
+        <Button x:Name="btnX2" 
+                Grid.Row="4"
+                Grid.Column="1"
+                Content="x^2" 
+                Margin="5" 
+                Background="Transparent"
+                Click="btnX2_Click"/>
+        <Button x:Name="btnRaiz" 
+                Grid.Row="4" 
+                Grid.Column="2"
+                Content="√x"
+                Margin="5" 
+                Background="Transparent" Click="btnRaiz_Click"/>
+        <Button x:Name="btnDivision" 
+                Grid.Row="4"
+                Grid.Column="3"
+                Content="∶" 
+                Margin="5" 
+                Background="Transparent" Click="btnDivision_Click"/>
+
+        <Button x:Name="btnSiete" 
+                Grid.Row="5"
+                Grid.Column="0"
+                Content="7" 
+                Margin="5" 
+                Background="Transparent" 
+                Click="btn_Click"/>
+        <Button x:Name="btnOcho" 
+                Grid.Row="5" 
+                Grid.Column="1"
+                Content="8" 
+                Margin="5"
+                Background="Transparent"
+                Click="btn_Click"/>
+        <Button x:Name="btnNueve" 
+                Grid.Row="5"
+                Grid.Column="2" 
+                Content="9" 
+                Margin="5"
+                Background="Transparent"
+                Click="btn_Click"/>
+        <Button x:Name="btnMulti" 
+                Grid.Row="5" 
+                Grid.Column="3"
+                Content="Ⅹ"
+                Margin="5" 
+                Background="Transparent" Click="btnMulti_Click" />
+
+        <Button x:Name="btnCuatro" 
+                Grid.Row="6"
+                Grid.Column="0"
+                Content="4"
+                Margin="5" 
+                Background="Transparent"
+                Click="btn_Click"/>
+        <Button x:Name="btnCinco" 
+                Grid.Row="6"
+                Grid.Column="1"
+                Content="5" 
+                Margin="5" 
+                Background="Transparent" 
+                Click="btn_Click"/>
+        <Button x:Name="btnSeis" 
+                Grid.Row="6"
+                Grid.Column="2" 
+                Content="6" 
+                Margin="5" 
+                Background="Transparent"
+                Click="btn_Click"/>
+        <Button x:Name="btnResta" 
+                Grid.Row="6"
+                Grid.Column="3"
+                Content="-" 
+                Margin="5" 
+                Background="Transparent" Click="btnResta_Click" />
+
+        <Button x:Name="btnUno"
+                Grid.Row="7" 
+                Grid.Column="0"
+                Content="1" 
+                Margin="5" 
+                Background="Transparent"
+                Click="btn_Click"/>
+        <Button x:Name="btnDos"
+                Grid.Row="7"
+                Grid.Column="1" 
+                Content="2" 
+                Margin="5" 
+                Background="Transparent"
+                Click="btn_Click"/>
+        <Button x:Name="btnTres" 
+                Grid.Row="7"
+                Grid.Column="2"
+                Content="3"
+                Margin="5"
+                Background="Transparent" 
+                Click="btn_Click"/>
+        <Button x:Name="btnSuma"
+                Grid.Row="7" 
+                Grid.Column="3" 
+                Content="+" 
+                Margin="5" 
+                Background="Transparent" Click="btnSuma_Click"/>
+
+        <Button x:Name="btnMasMenos"
+                Grid.Row="8"
+                Grid.Column="0"
+                Content="+/-"
+                Margin="5" 
+                Background="Transparent"
+                Click="btnMasMenos_Click"/>
+        <Button x:Name="btnCero"
+                Grid.Row="8" 
+                Grid.Column="1" 
+                Content="0" 
+                Margin="5" 
+                Background="Transparent" 
+                Click="btn_Click"/>
+        <Button x:Name="btnPuntito" 
+                Grid.Row="8"
+                Grid.Column="2" 
+                Content="."
+                Margin="5"
+                Background="Transparent" 
+                Click="btn_Click"/>
+        <Button x:Name="btnIgual" 
+                Grid.Row="8"
+                Grid.Column="3" 
+                Content="="
+                Foreground="White"
+                Background="Blue" Click="btnIgual_Click"/>
+    </Grid>
+</Window>
