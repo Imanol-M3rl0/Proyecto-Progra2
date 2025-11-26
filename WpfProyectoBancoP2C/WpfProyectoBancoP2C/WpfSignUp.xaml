@@ -120,6 +120,11 @@
                Grid.Row="9"
                Grid.ColumnSpan="2"
                FontSize="15"/>
+        <Button x:Name="btnA"
+                Content="Ludwing"
+                Grid.Row="9"
+                Grid.Column="1"
+                Click="btnAceptar_Click"/>
 
         <TextBlock x:Name="txtResultado"
            Grid.Row="10"
