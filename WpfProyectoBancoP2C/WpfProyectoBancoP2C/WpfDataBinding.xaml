@@ -1,0 +1,87 @@
+﻿<Window x:Class="WpfProyectoBancoP2C.WpfDataBinding"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfProyectoBancoP2C"
+        mc:Ignorable="d"
+        Title="Banco Bisa - DataBinding"
+        Height="450" 
+        Width="500"
+        Icon="/images/LogoBisa.png">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/BancoBisa2.png" Opacity="0.9"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Label x:Name="lbltitulo"
+               Content="Mis Cuentas"
+               FontSize="27"
+               Grid.ColumnSpan="2"
+              />
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+            <Label x:Name="lblListaCuentas"
+                   Content="Lista de Cuentas:"
+                   FontSize="15"
+                    />
+            <ListBox x:Name="lstBCuentas" 
+                      Opacity="0.8"
+                      Height="150"
+                      ItemsSource="{Binding ListaCuentas}" 
+                      SelectionChanged="lstBCuentas_SelectionChanged"
+                      SelectedItem="{Binding cuentaSel}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="{Binding Nombre}" Foreground="Black"/>
+                            <Label Content=" - " Foreground="Black"/>
+                            <Label Content="{Binding Saldo}" Foreground="Black"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="2">
+            <Label x:Name="lblNumCta"
+               Content="Numero de Cuenta: "
+                   FontSize="20"
+                   />
+            <TextBox x:Name="txtNumCta"
+                     Text="{Binding cuentaSel.Nombre, Mode=TwoWay}"
+                   FontWeight="Bold"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <Label x:Name="lblSaldo"
+               Content="Saldo: "
+                   FontSize="20"
+                   />
+            <TextBox x:Name="txtSaldo"
+                     Text="{Binding cuentaSel.Precio, Mode=TwoWay}"
+                   FontWeight="Bold"/>
+        </StackPanel>
+        <Button x:Name="btnAgregar"
+                Grid.Row="3"
+                Grid.Column="1"
+                Content="Agregar Cuenta" 
+                Click="btnAgregar_Click"/>
+        <Button x:Name="btnBorrar"
+                Grid.Row="3"
+                Content="Borrar Cuenta" 
+                Click="btnBorrar_Click" 
+                />
+    </Grid>
+</Window>

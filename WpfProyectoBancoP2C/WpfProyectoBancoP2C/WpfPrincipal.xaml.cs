@@ -10,19 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfProyectoBancoP2C
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para WpfPrincipal.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class WpfPrincipal : Window
     {
-        public MainWindow()
+        public WpfPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void btnDataBinding_Click(object sender, RoutedEventArgs e)
+        {
+            WpfDataBinding winDataBinding = new WpfDataBinding();
+            winDataBinding.Show();
+            this.Close();
         }
     }
 }

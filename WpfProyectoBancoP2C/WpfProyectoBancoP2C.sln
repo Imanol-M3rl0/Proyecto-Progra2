@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfProyectoBancoP2C", "WpfProyectoBancoP2C\WpfProyectoBancoP2C.csproj", "{940BC64D-B829-4CE7-8321-6305713DBCBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{940BC64D-B829-4CE7-8321-6305713DBCBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{940BC64D-B829-4CE7-8321-6305713DBCBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{940BC64D-B829-4CE7-8321-6305713DBCBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{940BC64D-B829-4CE7-8321-6305713DBCBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B072C43F-551F-425C-9C72-AA595C4B7016}
+	EndGlobalSection
+EndGlobal
